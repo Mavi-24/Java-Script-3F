@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Películas - Explora el Cine</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Encabezado -->
+    <header id="header">
+        <h1>Explora el Cine</h1>
+        <nav>
+            <ul>
+                <li><a href="#main">Inicio</a></li>
+                <li><a href="#api-section">Películas Populares</a></li>
+                <li><a href="#form-section">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Sección principal -->
+    <main id="main">
+        <section class="intro">
+            <h2>Bienvenidos a "Explora el Cine"</h2>
+            <p>Descubre películas populares, géneros favoritos y datos curiosos sobre el mundo del cine.</p>
+        </section>
+    </main>
+
+    <!-- Sección de API -->
+    <section id="api-section">
+        <h2>Películas Populares</h2>
+        <button id="load-movies">CARGAR PELICULAS</button>
+        <div id="movies-container">
+            <!-- Aquí se mostrarán los datos de la API -->
+        </div>
+    </section>
+
+    <!-- Contenedor del Modal -->
+   <div id="modal" class="modal">
+    <div class="modal-content">
+        <span id="cerrar-modal" class="cerrar">&times;</span>
+        <h2 id="titulo-modal"></h2>
+        <p id="descripcion-modal"></p>
+        <p><strong>Calificación:</strong> <span id="calificacion-modal"></span></p>
+    </div>
+   </div>
+
+
+    <!-- Sección de Formulario -->
+    <section id="form-section">
+        <h2>Contáctanos</h2>
+        <form id="contact-form" novalidate>
+            <label for="name">Nombre:</label>
+            <input type="text" id="name" name="name" required>
+            <small id="name-error" class="error"></small>
+    
+            <label for="email">Correo Electrónico:</label>
+            <input type="email" id="email" name="email" required>
+            <small id="email-error" class="error"></small>
+    
+            <label for="favorite-movie">Película Favorita: (Opcional)</label>
+            <input type="text" id="favorite-movie" name="favorite-movie" placeholder="Seguro tienes una!" required>
+            <small id="favorite-movie-error" class="error"></small>
+
+            <label for="message">Mensaje:</label>
+            <textarea id="message" name="message" required></textarea>
+            <small id="message-error" class="error"></small>
+    
+           
+    
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+    
+
+    <script src="./app.js"></script>
+</body>
+</html>
